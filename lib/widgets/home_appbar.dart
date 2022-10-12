@@ -60,12 +60,15 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
         kWidth5,
       ],
       bottom: PreferredSize(
-        preferredSize: const Size.fromHeight(80),
+        preferredSize: const Size.fromHeight(5),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(
+              left: 20.0, right: 20.0, top: 10.0, bottom: 10.0),
           child: SearchField(
             suggestions: const [],
             searchInputDecoration: InputDecoration(
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
               hintText: "Search any product here",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(3),
