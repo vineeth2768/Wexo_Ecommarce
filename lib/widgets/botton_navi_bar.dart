@@ -12,7 +12,7 @@ class CustomBottomBar extends StatelessWidget {
     return BottomAppBar(
       color: kWhiteColor,
       child: SizedBox(
-        height: 90,
+        height: MediaQuery.of(context).size.height / 10,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -65,7 +65,7 @@ class BottomNavigationButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        kHeight8,
+        kHeight10,
         CircleAvatar(
           backgroundColor: color,
           radius: 25,
@@ -77,7 +77,14 @@ class BottomNavigationButtons extends StatelessWidget {
             ),
           ),
         ),
-        Text(title),
+        kHeight5,
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 10,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
     );
   }
